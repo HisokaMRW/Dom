@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple d'utilisation du DOM et des événéments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body onresize="afficheInfo()">
+    <h1 onclick="alert('clic sur le titre')">Evénements et DOM</h1>
+    <p id="positionTaille">Changez la taille de la page...</p>
+    <script>
+        function afficheInfo() {
+            console.log("URL du navigateur : " + window.location.href)
+            console.log("Hostname du serveur : " + window.location.hostname)
+            console.log("Langue du navigateur : " + navigator.language)
+            let defScreen = screen.width + "x" + screen.height
+            let defPage = window.innerWidth + "x" + window.innerHeight
+            console.log("Votre écran : " + defScreen)
+            console.log("Votre page : " + defPage)
+            document.getElementById("positionTaille").innerHTML = defPage
+        }
+    </script>
+</body>
+
+</html>
